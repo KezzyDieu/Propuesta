@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/flowers.png" type="image/x-icon">
+  <title>Flowers</title>
+  <style>
+    /* Puedes agregar estilos extra para el gif si lo deseas */
+    #gifImage {
+      display: none;       /* Oculto inicialmente */
+      position: fixed;     /* Fijo en la pantalla */
+      bottom: 20px;        /* A 20px desde abajo */
+      left: 50%;           /* Centrado horizontalmente */
+      transform: translateX(-50%);
+      width: 150px;        /* Tamaño pequeño; ajusta según necesites */
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div class="greetings">
+    <span>V</span>
+    <span>a</span>
+    <span>l</span>
+    <span>!</span>
+  </div>
+  <div class="description">
+    <span>¿Quieres ser mi san valentin ?)</span>
+  </div>
+  <div class="button">
+    <button class="botones">
+      <a href="flower.html" style="color: #fff;">Si?</a>
+    </button>
+    <!-- Agregamos un id al botón "No ;C" -->
+    <button class="botones" id="noButton">
+      <a style="color: #fff;">No ;C</a>
+    </button>
+  </div>
+  
+  <!-- Elemento de imagen para el GIF, oculto inicialmente -->
+  <img id="gifImage" src="img/Quiero llorar.jpg" >
+
+  <!-- Script para mostrar el GIF al hacer clic en el botón "No ;C" -->
+  <script>
+    // Obtenemos el botón por su id
+    const noButton = document.getElementById('noButton');
+    // Obtenemos el elemento de la imagen
+    const gifImage = document.getElementById('gifImage');
+
+    noButton.addEventListener('click', function() {
+      // Al hacer clic, mostramos el GIF
+      gifImage.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
